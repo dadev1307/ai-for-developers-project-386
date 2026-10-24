@@ -21,23 +21,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - `npx vitest run src/components/ui/__tests__/button.test.tsx` — один файл
 - `npx shadcn@latest add <name>` — добавить UI-компонент
 
-## Typecheck gotcha
-
-`npx tsc --noEmit` падает с `Cannot find name 'LayoutProps'`, пока не существует `.next/types` — глобальные типы Next 16 (типизированные пропсы лейаутов) генерируются при `next dev`/`next build`. Перед голым `tsc` один раз запустите сборку. `next-env.d.ts` генерируется автоматически и в git не коммитится.
-
 ## Conventions
 
 - Работа идёт через фича-ветки: ветка → PR в `main` → squash-merge. Прямые пуши в `main` не делаем. Имя ветки — `feat/...`, `fix/...`, `docs/...`, `ci/...`; заголовок PR — обязательно в формате Conventional Commits (при squash он попадает в историю `main`).
 - Коммиты строго в Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `ci:`) — release-please (`release-type: node`) собирает из них Release PR после каждого мержа в `main`.
 - `.github/workflows/hexlet-check.yml` не трогать (не переименовывать, не удалять) — требование Хекслета.
-- Тесты лежат в папках `__tests__` рядом с исходниками; окружение jsdom, `@testing-library/jest-dom` подключается через `vitest.setup.ts`.
 - Импорт-алиас: `@/*` → `src/*`.
-
-## shadcn/ui specifics
-
-- Стиль `base-nova` на примитивах `@base-ui/react` (Base UI, **не Radix** — дефолт из старых доков shadcn здесь неверен).
-- Компоненты в `src/components/ui` — это скопированный исходный код, которым владеет проект: правьте свободно, удаляйте вместе с файлом. `cn` — пакет `cn`, реэкспорт из `src/lib/utils`.
-- `Input` намеренно содержит `suppressHydrationWarning`: браузерные расширения (например, вписывают `data-sharkid` в `<input>`) меняют DOM до гидратации, и бандл React canary в Next предупреждает о лишних атрибутах. Не удалять без понимания причины.
 
 ## Toolchain pins
 
