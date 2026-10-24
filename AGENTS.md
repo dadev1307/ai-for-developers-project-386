@@ -27,7 +27,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Conventions
 
-- Коммиты строго в Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `ci:`) — release-please (`release-type: node`) на каждый push в `main` собирает из них Release PR.
+- Работа идёт через фича-ветки: ветка → PR в `main` → squash-merge. Прямые пуши в `main` не делаем. Имя ветки — `feat/...`, `fix/...`, `docs/...`, `ci/...`; заголовок PR — обязательно в формате Conventional Commits (при squash он попадает в историю `main`).
+- Коммиты строго в Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `ci:`) — release-please (`release-type: node`) собирает из них Release PR после каждого мержа в `main`.
 - `.github/workflows/hexlet-check.yml` не трогать (не переименовывать, не удалять) — требование Хекслета.
 - Тесты лежат в папках `__tests__` рядом с исходниками; окружение jsdom, `@testing-library/jest-dom` подключается через `vitest.setup.ts`.
 - Импорт-алиас: `@/*` → `src/*`.
