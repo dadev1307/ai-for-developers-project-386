@@ -23,7 +23,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Conventions
 
-- Работа идёт через фича-ветки: ветка → PR в `main` → squash-merge. Прямые пуши в `main` не делаем. Имя ветки — `feat/...`, `fix/...`, `docs/...`, `ci/...`; заголовок PR — обязательно в формате Conventional Commits (при squash он попадает в историю `main`).
+- Работа идёт через фича-ветки: ветка → PR в `main` → squash-merge. Прямые пуши в `main` не делаем (запрещены pre-push hook'ом и `opencode.json`). Имя ветки — `feat/...`, `fix/...`, `docs/...`, `ci/...`; заголовок PR — обязательно в формате Conventional Commits (при squash он попадает в историю `main`).
+- Агент создаёт ветки и PR, но **не апрувит и не мержит** — мержит только человек (запрет в `opencode.json`: merge/review эндпоинты и прямые пуши в `main`).
 - Коммиты строго в Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `ci:`) — release-please (`release-type: node`) собирает из них Release PR после каждого мержа в `main`.
 - `.github/workflows/hexlet-check.yml` не трогать (не переименовывать, не удалять) — требование Хекслета.
 - Импорт-алиас: `@/*` → `src/*`.

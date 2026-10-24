@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permissions": [
+    { "action": "shell", "resource": "git push origin main", "effect": "deny" },
+    { "action": "shell", "resource": "git push origin main *", "effect": "deny" },
+    { "action": "shell", "resource": "git push * main", "effect": "deny" },
+    { "action": "shell", "resource": "git push * main *", "effect": "deny" },
+    { "action": "shell", "resource": "git push * HEAD:main*", "effect": "deny" },
+    { "action": "shell", "resource": "*api.github.com/*/pulls/*/merge*", "effect": "deny" },
+    { "action": "shell", "resource": "*api.github.com/*/pulls/*/reviews*", "effect": "deny" },
+    { "action": "shell", "resource": "*api.github.com/*/branches/*/protection*", "effect": "deny" },
+    { "action": "shell", "resource": "*api.github.com/*/rulesets*", "effect": "deny" },
+    { "action": "shell", "resource": "*api.github.com/*/actions/permissions*", "effect": "deny" },
+    { "action": "shell", "resource": "*api.github.com/*/git/refs/heads/main*", "effect": "deny" },
+    { "action": "github_merge_pull_request", "resource": "*", "effect": "deny" },
+    { "action": "github_pull_request_review_write", "resource": "*", "effect": "deny" },
+    { "action": "edit", "resource": "opencode.json", "effect": "ask" }
+  ]
+}
