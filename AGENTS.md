@@ -34,3 +34,17 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - `@vitejs/plugin-react` зафиксирован на `^5`: v6 требует `@babel/core@8`, а цепочка зависимостей shadcn CLI — `@babel/core@7` (npm ERESOLVE). Не обновлять вслепую.
 - `vitest.config.mts` использует нативный Vite `resolve.tsconfigPaths: true` — плагин `vite-tsconfig-paths` не нужен.
 - Vitest гоняет стабильный `react-dom@19.3`, браузер — React canary из бандла Next. Предупреждения гидратации о «лишних» DOM-атрибутах в jsdom не воспроизводятся — не пытайтесь ловить их тестами.
+
+## Agent skills
+
+### Issue tracker
+
+Issues are tracked in GitHub Issues (this repo); use the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five defaults: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: root `GLOSSARY.md` + `docs/adr/`. See `docs/agents/domain.md`.
