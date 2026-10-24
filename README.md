@@ -10,20 +10,36 @@
 
 ## Стек
 
-- Разное
+- [Next.js](https://nextjs.org) (App Router) + React 19
+- TypeScript
+- Tailwind CSS v4 + [shadcn/ui](https://ui.shadcn.com)
+- Vitest + React Testing Library
+- Release Please + [Conventional Commits](https://www.conventionalcommits.org/ru/) (`feat:`, `fix:`, `chore:`, `docs:`, `ci:` …)
 
 ## Установка
-
-<!-- Опишите установку: клонирование, зависимости, переменные окружения -->
 
 ```bash
 git clone https://github.com/dadev1307/ai-for-developers-project-386.git
 cd ai-for-developers-project-386
+npm install
 ```
 
 ## Использование
 
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+```bash
+npm run dev        # запуск dev-сервера → http://localhost:3000
+npm run build      # production-сборка
+npm run start      # запуск production-сборки
+npm run lint       # проверка ESLint
+npm test           # запуск тестов (vitest)
+npm run test:watch # тесты в watch-режиме
+```
+
+## Добавление UI-компонентов shadcn/ui
+
+```bash
+npx shadcn@latest add <имя-компонента>
+```
 
 ---
 
