@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/dadev1307/ai-for-developers-project-386/compare/v1.0.0...v1.1.0) (2026-10-27)
+
+
+### Features
+
+* add booking form with slot selection on /book page ([c566abd](https://github.com/dadev1307/ai-for-developers-project-386/commit/c566abdf71dc6530ef83e4dd8a5eb1aa29a52161))
+* add booking form with slot selection on /book page ([c4a4e24](https://github.com/dadev1307/ai-for-developers-project-386/commit/c4a4e242715721b1e35dfa5299402b75f7281d58)), closes [#7](https://github.com/dadev1307/ai-for-developers-project-386/issues/7)
+* add landing page ([46f00e6](https://github.com/dadev1307/ai-for-developers-project-386/commit/46f00e61b50d367b0508fc428bb790d58e843350))
+* add landing page ([3e16a4f](https://github.com/dadev1307/ai-for-developers-project-386/commit/3e16a4f4ee626bf6a58027f6e21ff75480521cba))
+
 ## 1.0.0 (2026-10-24)
 
 
